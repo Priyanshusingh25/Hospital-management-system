@@ -1,0 +1,28 @@
+<a href="/" class="btn btn-outline-dark">Home</a>
+<h3>Insert Doctor</h3>
+
+<form action="/doctor" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{doctor._id}}">
+    <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" class="form-control" name="fullName" placeholder="Full Name" value="{{doctor.fullName}}">
+        <div class="text-danger">
+            {{doctor.fullNameError}}</div>
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="text" class="form-control" name="email" placeholder="Email" value="{{doctor.email}}">
+        <div class="text-danger">
+            {{doctor.emailError}}</div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Mobile</label>
+            <input type="text" class="form-control" name="mobile" placeholder="Mobile" value="{{doctor.mobile}}">
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+        <a class="btn btn-secondary" href="/doctor/list"><i class="fa fa-list-alt"></i> View All</a>
+    </div>
+</form>
